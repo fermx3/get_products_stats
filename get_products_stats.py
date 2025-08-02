@@ -11,7 +11,7 @@ def get_products_stats(self, sellers_df=None):
         products_sellers_df = products_sellers_df.merge(Product().get_training_data(), on='product_id')
 
         if sellers_df is not None:
-            products_sellers_df = products_sellers_df.merge(sellers_df, on='seller_id', how='inner')
+            products_sellers_df = products_sellers_df.merge(sellers_df['seller_id'], on='seller_id', how='inner')
 
         # set pandas cells with and height to fit all categories
         pd.set_option('display.max_colwidth', None)
