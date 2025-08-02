@@ -1,3 +1,5 @@
+from olist.product import Product
+
 def get_products_stats(self, sellers_df=None):
         """
         Returns a DataFrame with:
