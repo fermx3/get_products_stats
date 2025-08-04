@@ -13,7 +13,7 @@ def get_products_stats(self, sellers_df=None):
         if sellers_df is not None:
             products_sellers_df = products_sellers_df.merge(sellers_df['seller_id'], on='seller_id', how='inner')
 
-        # set pandas cells with and height to fit all categories
+        # set pandas cells width and height to fit all categories
         pd.set_option('display.max_colwidth', None)
         pd.set_option('display.max_columns', None)
         pd.set_option('display.width', 0)
